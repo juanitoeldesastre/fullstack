@@ -10,6 +10,8 @@ hola-mundo
 │   ├── index.html
 │   └── styles
 │       └── style.css
+│   └── scripts
+│       └── script.js
 └── README.md
 ```
 
@@ -18,6 +20,8 @@ hola-mundo
 - **src/index.html**: Este archivo es la página principal del proyecto. Contiene la estructura básica de un documento HTML y muestra el mensaje "Hola Mundo".
   
 - **src/styles/style.css**: Este archivo contiene los estilos CSS para la página. Se utiliza para dar formato y diseño al contenido de `index.html`.
+
+- **src/script/script.js**: Este archivo contiene los estilos CSS para la página. Se utiliza para dar formato y diseño al contenido de `index.html`.
 
 ## Instrucciones para Ejecutar
 
