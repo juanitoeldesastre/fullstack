@@ -1,3 +1,17 @@
+/* Estilo de la tabla tipo excel */
 table, th, td {
-  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #4472C4;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #DDEBF7; /* filas impares */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;  /* filas pares */
 }
