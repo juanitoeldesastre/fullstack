@@ -20,11 +20,11 @@ function calcular() {
 
   if (!descripcion || isNaN(monto) || !categoria) {
     // Muestra mensaje de error en rojo si falta algún dato
-    mensaje.style.width = "200px";
+    mensaje.style.width = "300px";
     mensaje.style.padding = "10px";
     mensaje.style.color = "red";
     mensaje.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
-    mensaje.textContent = "Completa todos los campos";
+    mensaje.textContent = "Error : Completa todos los campos";
     return;
   }
 
@@ -32,11 +32,11 @@ function calcular() {
   agregarGastoATabla(gasto);
   guardarGastoEnAlmacenamiento(gasto);
   // Muestra mensaje de éxito en verde
-  mensaje.style.width = "200px";
+  mensaje.style.width = "300px";
   mensaje.style.padding = "10px";
   mensaje.style.color = "green";
   mensaje.style.backgroundColor = "rgba(0, 255, 0, 0.1)";
-  mensaje.textContent = `$${monto.toFixed(2)} agregado`;
+  mensaje.textContent = `Se agregado $${monto.toFixed(2)} en ${categoria}`;
 
   document.getElementById("formulario-gasto").reset();
   actualizarTotal();

@@ -1,17 +1,157 @@
-/* Estilo de la tabla tipo excel */
-table, th, td {
+/* Estilo general */
+body {
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 32px;
+  font-family: 'Inter', sans-serif;
+  color: rgb(45, 52, 54);
+  line-height: 1.6;
+}
+
+/* Contenedor del formulario de gasto */
+.contenedor-gasto {
+  margin-left: 25%;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  height: 350px;
+  margin-bottom: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animación al pasar el mouse */
+.contenedor-gasto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Título del formulario */
+h2 {
+  text-align: center;
+  margin: 0 0 0px 0;
+}
+
+/* Estilos para los campos de entrada y select */
+input[type="text"],
+input[type="number"],
+select {
+  width: 90%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: small;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Botón de acción principal */
+.button-calcular {
+  background-color: #0984e3;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: small;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  width: 100%;
+  max-width: 371px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.button-calcular:hover {
+  opacity: 0.9;
+}
+
+/* Mensaje informativo o de resultado */
+#mensaje {
+  font-size: medium;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de la tabla */
+.contenedor-tabla {
+  font-size: small;
+  margin-left: 25%;
+  max-width: 1000px;
+  height: 400px;
+  overflow-x: auto;
+  background-color: #ffffff;
+  padding: 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla estilo tipo Excel */
+table {
   border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 th {
-  background-color: #4472C4;
+  background-color: #0984e3;
   color: #ffffff;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #DDEBF7; /* filas impares */
+  background-color: #DDEBF7;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #ffffff;  /* filas pares */
+  background-color: #ffffff;
+}
+
+/* Aplica ancho fijo uniforme a todas las columnas */
+#tabla-gastos {
+  width: 100%;
+  table-layout: fixed; /* Fuerza el ancho fijo de columnas */
+  border-collapse: collapse;
+}
+
+#tabla-gastos th,
+#tabla-gastos td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Asegura que el texto se ajuste */
+}
+
+/* Fila de encabezado */
+#tabla-gastos thead th {
+  background-color: #0984e3;
+  color: white;
+}
+
+/* Alternancia de colores en filas */
+#tabla-gastos tbody tr:nth-child(odd) {
+  background-color: #DDEBF7;
+}
+
+#tabla-gastos tbody tr:nth-child(even) {
+  background-color: #ffffff;
 }

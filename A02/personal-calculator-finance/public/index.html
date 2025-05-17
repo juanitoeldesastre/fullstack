@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
     <title>Calculadora de gastos personales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Formulario para agregar mis gastos -->
@@ -12,10 +13,8 @@
         <h2>Agregar un gasto</h2>
         <label for="descripcion"></label>
         <input type="text" id="descripcion" placeholder="Descripción" required />
-        <br><br>
         <label for="monto"></label>
         <input type="number" id="monto" placeholder="Monto" required />
-        <br><br>
         <label for="categoria"></label>
         <select id="categoria" required>
           <option value="">Selecciona una categoría</option>
@@ -23,22 +22,21 @@
           <option value="transporte">Transporte</option>
           <option value="ocio">Ocio</option>
         </select>
-        <br><br>
-        <button onclick="calcular()">Calcular</button>
+        <button type="button" class="button-calcular" onclick="calcular()">Calcular</button>
       </form>
     </div>
     <!-- Agregar un gráfico circular gráfico circular con estadísticas de gastos -->
     <!-- Agregar un contenedor con información financiera en tiempo real y fecha -->
-    <hr> 
+    <!-- <hr> --> 
     <!-- Tabla dinámica tipo excel -->
     <div class="contenedor-tabla">
       <table id="tabla-gastos" style="border: 1px solid black;">
         <thead>
           <tr>
-            <th>Descripción</th>
-            <th>Monto</th>
-            <th>Categoría</th>
-            <th>Eliminar</th>
+            <th style="width: 550px;">Descripción</th>
+            <th style="width: 100px;">Monto</th>
+            <th style="width: 100px;" >Categoría</th>
+            <th style="width: 60px;">Eliminar</th>
           </tr>
         </thead>
         <tbody></tbody>
