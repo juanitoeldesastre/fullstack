@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #333;
+            position: absolute;
+            transition: all 0.2s ease;
+            user-select: none; /* Evita que se seleccione el texto */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mensaje = document.querySelector("h1");
+
+            mensaje.addEventListener("mousemove", () => {
+                const bodyRect = document.body.getBoundingClientRect();
+                const maxX = bodyRect.width - mensaje.offsetWidth;
+                const maxY = bodyRect.height - mensaje.offsetHeight;
+
+                const x = Math.random() * maxX;
+                const y = Math.random() * maxY;
+
+                mensaje.style.left = `${x}px`;
+                mensaje.style.top = `${y}px`;
+            });
+        });
+    </script>
+</body>
+</html>
