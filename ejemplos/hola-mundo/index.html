@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
+    <title>Adios mundo</title>
     <style>
         body {
             display: flex;
@@ -19,16 +19,19 @@
         }
 
         h1 {
-            color: #333;
+            color: black;
             position: absolute;
-            transition: all 0.2s ease;
+            transition: all 0.4s ease;
             user-select: none; /* Evita que se seleccione el texto */
             cursor: pointer;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    <h1>Hola mundo</h1>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
