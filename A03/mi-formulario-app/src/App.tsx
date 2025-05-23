@@ -1,5 +1,6 @@
 import FormularioContacto from './components/FormularioContacto'; 
- 
+import './index.css';
+
 function App() { 
   return ( 
     <div style={{ padding: '20px' }}> 
